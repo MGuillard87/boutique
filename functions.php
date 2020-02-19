@@ -1,4 +1,5 @@
 <?php
+
 function afficheArticle1() {
     $liste_articles = [
         ["image"=>"images/chapeau_chat.jpg", "name"=>"Chapeau", "price"=>10],

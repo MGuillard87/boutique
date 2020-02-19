@@ -1,6 +1,14 @@
 <?php
-include('catalogue_fonction.php');
-include('pdo_test/fonction_bdd.php');
+// On démarre la session AVANT d'écrire du code HTML
+// Inclusion de la page booter.php qui va contenir la fonction session_start() ET inclure les fonctions et LANCER LA BDD via un fichier pour les utiliser dans ce fichier
+include('booter.php');
+
+// créer quelques variables de session dans $_SESSION
+if (!empty($_POST)) {
+    $_SESSION = $_POST;
+}
+// connection à la BDD
+$bdd = connectionBdd();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -14,8 +22,7 @@ include('pdo_test/fonction_bdd.php');
     <body>
     <?php
 
-    // connection à la BDD
-    $bdd = connectionBdd();
+
 
     ?>
         <div class="container-fluid">
@@ -34,6 +41,7 @@ include('pdo_test/fonction_bdd.php');
                 // création de la while pour afficher chaque produit avec son nom, sa description, son prix et sa photo
                 while ($donnees = $listeProduits->fetch()){
                 //        var_dump($liste_articles);
+
                 ?>
 
                 <div class="row">

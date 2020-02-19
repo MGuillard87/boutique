@@ -64,7 +64,7 @@
       <workItem from="1582014098591" duration="3517000" />
       <workItem from="1582018466036" duration="11232000" />
       <workItem from="1582034466192" duration="7139000" />
-      <workItem from="1582099320702" duration="9947000" />
+      <workItem from="1582099320702" duration="15382000" />
     </task>
     <task id="LOCAL-00001" summary="1er commit phpstorm">
       <created>1580732727962</created>
@@ -122,10 +122,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582034383606" />
-    <state x="2714" y="444" key="NewPhpFileDialog" timestamp="1581934271295">
+    <state x="2714" y="444" key="NewPhpFileDialog" timestamp="1582118414548">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2714" y="444" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1581934271295" />
+    <state x="2714" y="444" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582118414548" />
     <state x="2714" y="444" key="NewPhpFileDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1580821766743" />
     <state x="2381" y="163" key="SettingsEditor" timestamp="1580732679886">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -163,7 +163,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/panier.php</url>
-          <line>86</line>
+          <line>87</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>

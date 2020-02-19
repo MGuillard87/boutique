@@ -1,10 +1,11 @@
 <?php
 //var_dump($_POST);
-// inclure les fonctions et les données via un fichier pour les utiliser dans ce fichier
-include('catalogue_fonction.php');
-include('pdo_test/fonction_bdd.php');
-$bdd = connectionBdd();
+// On démarre la session AVANT d'écrire du code HTML
+// Inclusion de la page booter.php qui va contenir la fonction session_start() ET inclure les fonctions et LANCER LA BDD via un fichier pour les utiliser dans ce fichier
+include('booter.php');
 
+// connection à la BDD
+$bdd = connectionBdd();
 //foreach ($liste_articles as $clef=> $produits){
 //    var_dump($clef);
 //   var_dump( $produits);
@@ -14,7 +15,10 @@ $bdd = connectionBdd();
 //    }
 //}
 //die();
-
+// créer quelques variables de session dans $_SESSION
+if (!empty($_POST)) {
+    $_SESSION = $_POST;
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -50,14 +54,14 @@ $bdd = connectionBdd();
         // affiche le panier pour la première fois
         $sumTotal = 0;
 
-        if (!empty($_POST)) {
-            foreach ($_POST['products'] as $key => $selective) {
+        if (!empty($_SESSION)) {
+            foreach ($_SESSION['products'] as $key => $selective) {
                 $idDentique = $bdd->query('SELECT * FROM product WHERE idProduct=' . $key);
                 while ($productBasket = $idDentique->fetch()) {
 
                     // apppel de la fonction permettant de retourner le total du panier
-                    if (isset($_POST['quantities'][$productBasket['idProduct']])) {
-                        $quantiProduct = $_POST['quantities'][$productBasket['idProduct']];
+                    if (isset($_SESSION['quantities'][$productBasket['idProduct']])) {
+                        $quantiProduct = $_SESSION['quantities'][$productBasket['idProduct']];
                     } else {
                         $quantiProduct = 0;
                     }
@@ -87,6 +91,9 @@ $bdd = connectionBdd();
                             <input type="number" name="quantities[<?php echo $productBasket['idProduct'] ?>]" min="1"
                                    value="<?php echo $quantiProduct ?>"/><br>
                             <label for="case">Quantité</label>
+                            <div class="col-sm-12 ">
+                                <input type="submit" value="Supprimer cet article"/>
+                            </div>
                         </div>
                     </div>
                     <?php
