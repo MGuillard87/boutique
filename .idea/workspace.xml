@@ -64,7 +64,7 @@
       <workItem from="1582014098591" duration="3517000" />
       <workItem from="1582018466036" duration="11232000" />
       <workItem from="1582034466192" duration="7139000" />
-      <workItem from="1582099320702" duration="15382000" />
+      <workItem from="1582099320702" duration="16200000" />
     </task>
     <task id="LOCAL-00001" summary="1er commit phpstorm">
       <created>1580732727962</created>
@@ -152,18 +152,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/addArticleFinale.php</url>
-          <line>25</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/catalogue_fonction.php</url>
-          <line>3</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/panier.php</url>
-          <line>87</line>
+          <line>90</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
