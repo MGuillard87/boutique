@@ -33,10 +33,10 @@ if (!empty($_POST)) {
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Boutique</h1>
+            <h1>Panier</h1>
         </div>
     </div>
-    <form method="post" action="panier.php">
+    <form method="post" action="commande.php">
         <?php
         ;
         // Toujours vérifier que les informatons utilisées existent: var_dump très utile dans ce cas
@@ -88,7 +88,7 @@ if (!empty($_POST)) {
                         <div class="col align-self-center">
                             <input type="hidden" name="products[<?php echo $productBasket['idProduct'] ?>]" id="case"
                                    value=""/>
-                            <input type="number" name="quantities[<?php echo $productBasket['idProduct'] ?>]" min="1"
+                            <input type="number" name="quantities[<?php echo $productBasket['idProduct'] ?>]" min=1
                                    value="<?php echo $quantiProduct ?>"/><br>
                             <label for="case">Quantité</label>
                             <div class="col-sm-12 ">

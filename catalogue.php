@@ -3,10 +3,6 @@
 // Inclusion de la page booter.php qui va contenir la fonction session_start() ET inclure les fonctions et LANCER LA BDD via un fichier pour les utiliser dans ce fichier
 include('booter.php');
 
-// créer quelques variables de session dans $_SESSION
-if (!empty($_POST)) {
-    $_SESSION = $_POST;
-}
 // connection à la BDD
 $bdd = connectionBdd();
 ?>
@@ -35,7 +31,7 @@ $bdd = connectionBdd();
 
                 <?php
                 // Récupération des 10 derniers produits
-                $listeProduits = $bdd->query('SELECT * FROM product ORDER BY idProduct ASC LIMIT 0, 3');
+                $listeProduits = $bdd->query('SELECT * FROM product ORDER BY idProduct ASC LIMIT 0, 10');
 
                 // Affichage de chaque produit (toutes les données sont protégées par htmlspecialchars)
                 // création de la while pour afficher chaque produit avec son nom, sa description, son prix et sa photo
