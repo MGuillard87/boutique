@@ -44,13 +44,13 @@ if (!empty($_POST)) {
             <h1></h1>
         </div>
     </div>
-    <?php
+<?php
 
 
-    $sumTotal = 0;
+$sumTotal = 0;
 
     if (!empty($_SESSION)) { ?>
-        <?php
+<?php
         foreach ($_SESSION['products'] as $key => $selective) {
             $idDentique = $bdd->query('SELECT * FROM product WHERE idProduct=' . $key);
             while ($productBasket = $idDentique->fetch()) {
@@ -70,46 +70,39 @@ if (!empty($_POST)) {
                 </div>
 
                 <?php
-            }
+                }
         } ?>
-        <div class="row panier">
-            <div>
-                <p><?php echo "Le total de votre commande est de ". $sumTotal. " euros"; ?> </p>
-            </div>
-        </div>
-        <?php
-        // modifier le numéro de la commande pour pouvoir le rentrer dans la table orders
-        $numCommand = $bdd->query('SELECT idOrder FROM orders ORDER BY idOrders DESC LIMIT 0,1');
-        while ($orders = $numCommand->fetch()) {
-            echo "le dernier numéro de commande est ". $orders['idOrder'].'<br/>';
-            $rest = substr($orders['idOrder'], -3);
-            echo $rest. '</br>';
-            //            + 1 .  '</br>';
-            echo $rest=$rest + 1;}
-            echo $rest;
-
+                <div class="row panier">
+                    <div>
+                        <p><?php echo "Le total de votre commande est de ". $sumTotal. " euros"; ?> </p>
+                    </div>
+                </div>
+                <?php
+                // modifier le numéro de la commande pour pouvoir le rentrer dans la table orders
+                $numCommand = $bdd->query('SELECT idOrder FROM orders ORDER BY idOrders DESC LIMIT 0,1');
+                while ($orders = $numCommand->fetch()) {
+                    echo "le dernier numéro de commande est ". $orders['idOrder'].'<br/>';
+                    $rest = substr($orders['idOrder'], -3);
+                    echo $rest. '</br>';
+                //            + 1 .  '</br>';
+                    echo $rest=$rest + 1 . '</br>';
 //                    echo $compteurComand=$rest + 1;
-                $idOrder = strval($rest);
-                var_dump($idOrder);
+                $testInsert = $bdd->prepare('SELECT orders(idOrder, date, totalAmount, idClient, idOrders) VALUES(:`CMD`. , :possesseur, :console, :prix, :nbre_joueurs_max, :commentaires)');
+                $testInsert->execute(array(
+                    'nom' => $nom,
+                    'possesseur' => $possesseur,
+                    'console' => $console,
+                    'prix' => $prix,
+                    'nbre_joueurs_max' => $nbre_joueurs_max,
+                    'commentaires' => $commentaires
+                    ));
 
-                $totalAmount = $sumTotal;
-        var_dump($totalAmount);
-                $idClient = random_int(1,2);
-            $debutNomComand='CMD00';
+                echo 'Le jeu a bien été ajouté !';
 
-           $testInsert = $bdd->prepare('INSERT INTO orders (idOrder, totalAmount, idClient) VALUES(:idOrder, :totalAmount, :idClient)');
+                                }
 
-          $testInsert->execute(array(
-               'idOrder' => $debutNomComand . $idOrder,
-              'totalAmount' => $totalAmount,
-             'idClient' => $idClient
-          ));
+                    }
+                         ?>
 
-          echo 'la commande a bien été ajoutée !';
-
-    }
-    ?>
-
-</body>
+    </body>
 </html>
-

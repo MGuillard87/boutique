@@ -101,7 +101,7 @@ if (!empty($_POST)) {
                 }
             }
         }
-
+        $idDentique->closeCursor();
         // Affichage du total panier
         ?>
         <div class="row">

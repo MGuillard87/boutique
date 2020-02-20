@@ -31,7 +31,7 @@ $bdd = connectionBdd();
 
                 <?php
                 // Récupération des 10 derniers produits
-                $listeProduits = $bdd->query('SELECT * FROM product ORDER BY idProduct ASC LIMIT 0, 10');
+                $listeProduits = $bdd->query('SELECT * FROM product ORDER BY idProduct ASC LIMIT 0, 3');
 
                 // Affichage de chaque produit (toutes les données sont protégées par htmlspecialchars)
                 // création de la while pour afficher chaque produit avec son nom, sa description, son prix et sa photo
