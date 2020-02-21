@@ -1,11 +1,9 @@
 <?php
 // On démarre la session AVANT d'écrire du code HTML
-// Inclusion de la page booter.php qui va contenir la fonction session_start() ET inclure les fonctions et LANCER LA BDD via un fichier pour les utiliser dans ce fichier
+// Inclusion de la page booter.php qui va:  contenir la fonction session_start(), faire la connection à la BDD  ET inclure les fonctions et LANCER LA BDD via un fichier pour les utiliser dans ce fichier
 include('booter.php');
-
-// connection à la BDD
-$bdd = connectionBdd();
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -16,11 +14,6 @@ $bdd = connectionBdd();
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-    <?php
-
-
-
-    ?>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
@@ -36,8 +29,6 @@ $bdd = connectionBdd();
                 // Affichage de chaque produit (toutes les données sont protégées par htmlspecialchars)
                 // création de la while pour afficher chaque produit avec son nom, sa description, son prix et sa photo
                 while ($donnees = $listeProduits->fetch()){
-                //        var_dump($liste_articles);
-
                 ?>
 
                 <div class="row">
@@ -59,15 +50,12 @@ $bdd = connectionBdd();
                     </div>
                 </div>
         <?php   }
-
-        ?>
-            <div class="row-12 align-self-center" >
-            <input type="submit" value="commander"/>
-            </div>
-            </form>
-        </div>
-    <?php
     $listeProduits->closeCursor();
     ?>
+                <div class="row-12 align-self-center" >
+                    <input type="submit" value="commander"/>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

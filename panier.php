@@ -1,25 +1,26 @@
 <?php
-//var_dump($_POST);
 // On démarre la session AVANT d'écrire du code HTML
-// Inclusion de la page booter.php qui va contenir la fonction session_start() ET inclure les fonctions et LANCER LA BDD via un fichier pour les utiliser dans ce fichier
+// Inclusion de la page booter.php qui va:  contenir la fonction session_start(), faire la connection à la BDD  ET inclure les fonctions et LANCER LA BDD via un fichier pour les utiliserdans ce fichier
 include('booter.php');
 
-// connection à la BDD
-$bdd = connectionBdd();
-//foreach ($liste_articles as $clef=> $produits){
-//    var_dump($clef);
-//   var_dump( $produits);
-//    foreach ($produits as $clefs=> $quantites){
-//        var_dump($clefs);
-//        var_dump( $quantites);
+//if (isset($_POST)){
+//    $panier[]=;
+//    foreach ($_POST as $product){
+//        $_POST['quantities'] = $_SESSION['quantities'];
+//    }
+//    $_SESSION['panier'] = $panier;
+//    foreach ($panier as $product){
+//
 //    }
 //}
-//die();
+
+
 // créer quelques variables de session dans $_SESSION
 if (!empty($_POST)) {
     $_SESSION = $_POST;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -37,23 +38,10 @@ if (!empty($_POST)) {
         </div>
     </div>
     <form method="post" action="commande.php">
+
         <?php
-        ;
-        // Toujours vérifier que les informatons utilisées existent: var_dump très utile dans ce cas
-        //var_dump($liste_articles)
-
-        // affichage des variables nommées plus haut
-        // création de la foreach for pour afficher chaque article avec sa photo, son prix et son nom
         try {
-        //Toujours vérifier que les informatons utilisées existent et que les variables contiennent des données
-        //            var_dump($_POST);
-        // Si $_POST contient une/des données: la case est cochée et on peut afficher les articles
-
-        // On va boucler dans la superVariable $_POST pour aller chercher l'information/donnée qui nous intéresse
-        // Création de la variable sum pour calculer le total panier
-        // affiche le panier pour la première fois
         $sumTotal = 0;
-
         if (!empty($_SESSION)) {
             foreach ($_SESSION['products'] as $key => $selective) {
                 $idDentique = $bdd->query('SELECT * FROM product WHERE idProduct=' . $key);
@@ -73,7 +61,6 @@ if (!empty($_POST)) {
                         <div class="col align-self-center">
                             <img src="images/<?php echo htmlspecialchars($productBasket['image']); ?>" width="300"
                                  class="rounded corners img-fluid" alt="produit du panier ">
-
                         </div>
 
                         <div class="col align-self-center">
@@ -97,11 +84,11 @@ if (!empty($_POST)) {
                         </div>
                     </div>
                     <?php
-
                 }
             }
         }
         $idDentique->closeCursor();
+
         // Affichage du total panier
         ?>
         <div class="row">
@@ -116,17 +103,15 @@ if (!empty($_POST)) {
             </div>
         </div>
     </form>
-
+</body>
+</html>
     <?php
 
-
-    //    }
     } catch (Exception $e) {
         // En cas d'erreur, on affiche un message et on arrête tout
         die('Erreur : ' . $e->getMessage());
     }
     ?>
 
-</body>
-</html>
+
 

@@ -3,6 +3,8 @@
 
 // Je crée une page booter.php qui va contenir la fonction session_start() et que je vais inclure à l’aide de 'include' ou 'require' dans les pages voulues d’un site.
 session_start();
+//session_destroy();
+//header("Location: panier.php");
 
 
 
@@ -25,6 +27,11 @@ function connectionBdd()
     return $bdd;
 }
 
+// appel de la fonction qui permet de se connecter à la BDD
+$bdd = connectionBdd();
+
+
+
 // Fonction qui permet d'afficher une table
 function afficheTable($table, $bdd)
 {
@@ -32,6 +39,7 @@ function afficheTable($table, $bdd)
     $reponse = $bdd->query('SELECT * FROM $table');
     return $reponse;
 }
+
 
 
 
