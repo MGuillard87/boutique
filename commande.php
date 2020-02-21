@@ -83,27 +83,24 @@ if (!empty($_POST)) {
         while ($orders = $numCommand->fetch()) {
             echo "le dernier numéro de commande est ". $orders['idOrder'].'<br/>';
             $rest = substr($orders['idOrder'], -3);
-            echo $rest. '</br>';
+//            echo $rest. '</br>';
             //            + 1 .  '</br>';
-            echo $rest=$rest + 1;}
-            echo $rest;
+            $rest=$rest + 1;}
+//            echo $rest;
 
-//                    echo $compteurComand=$rest + 1;
+//             echo $compteurComand=$rest + 1;
                 $idOrder = strval($rest);
-                var_dump($idOrder);
-
                 $totalAmount = $sumTotal;
-        var_dump($totalAmount);
                 $idClient = random_int(1,2);
             $debutNomComand='CMD00';
 
-           $testInsert = $bdd->prepare('INSERT INTO orders (idOrder, totalAmount, idClient) VALUES(:idOrder, :totalAmount, :idClient)');
-
-          $testInsert->execute(array(
-               'idOrder' => $debutNomComand . $idOrder,
-              'totalAmount' => $totalAmount,
-             'idClient' => $idClient
-          ));
+//           $testInsert = $bdd->prepare('INSERT INTO orders (idOrder, totalAmount, idClient) VALUES(:idOrder, :totalAmount, :idClient)');
+//
+//          $testInsert->execute(array(
+//               'idOrder' => $debutNomComand . $idOrder,
+//              'totalAmount' => $totalAmount,
+//             'idClient' => $idClient
+//          ));
 
           echo 'la commande a bien été ajoutée !';
 

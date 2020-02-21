@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7454674-774e-451a-b2de-0c3153194160" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/commandetest1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panier.php" beforeDir="false" afterPath="$PROJECT_DIR$/panier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/commande.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +88,8 @@
       <workItem from="1582018466036" duration="11232000" />
       <workItem from="1582034466192" duration="7139000" />
       <workItem from="1582099320702" duration="21942000" />
-      <workItem from="1582186196939" duration="13486000" />
+      <workItem from="1582186196939" duration="14224000" />
+      <workItem from="1582272351885" duration="3426000" />
     </task>
     <task id="LOCAL-00001" summary="1er commit phpstorm">
       <created>1580732727962</created>
@@ -172,10 +168,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2012" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1580826097724" />
-    <state x="3050" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1582186585990">
+    <state x="3050" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1582272352222">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="3050" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582186585990" />
+    <state x="3050" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582272352222" />
     <state x="2689" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581934409615">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -184,16 +180,5 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2536" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580986886028" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/panier.php</url>
-          <line>90</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
