@@ -20,7 +20,7 @@ include('booter.php');
                     <h1>Boutique</h1>
                 </div>
             </div>
-            <form method="post" action="panier.php">
+            <form method="post" action="panierTest.php">
 
                 <?php
                 // Récupération des 10 derniers produits

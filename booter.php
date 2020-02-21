@@ -3,8 +3,7 @@
 
 // Je crée une page booter.php qui va contenir la fonction session_start() et que je vais inclure à l’aide de 'include' ou 'require' dans les pages voulues d’un site.
 session_start();
-//session_destroy();
-//header("Location: panier.php");
+
 
 
 

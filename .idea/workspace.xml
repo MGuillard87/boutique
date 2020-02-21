@@ -5,7 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booter.php" beforeDir="false" afterPath="$PROJECT_DIR$/booter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalogue.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/commande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commandeTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commandetest1.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/panier.php" beforeDir="false" afterPath="$PROJECT_DIR$/panier.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,10 +159,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582211559469" />
-    <state x="2714" y="444" key="NewPhpFileDialog" timestamp="1582278982777">
+    <state x="2714" y="444" key="NewPhpFileDialog" timestamp="1582300587611">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2714" y="444" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582278982777" />
+    <state x="2714" y="444" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582300587611" />
     <state x="2714" y="444" key="NewPhpFileDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1580821766743" />
     <state x="2381" y="163" key="SettingsEditor" timestamp="1580732679886">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -183,5 +184,16 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2536" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580986886028" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/panier.php</url>
+          <line>88</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
